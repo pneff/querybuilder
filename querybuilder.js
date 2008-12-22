@@ -14,15 +14,16 @@
     };
 
     /**
-     * finds out if current method (according to ref.service and ref.command) is post
-     * method can be set via commands['my_command'].method = 'post'
+     * Finds out if current method (according to ref.service and ref.command)
+     * is post method or any other non-GET method. Can be set via
+     * commands['my_command'].method = 'post'
      */
     ref.isPost = function() {
-	var method = config[ref.service].commands[ref.command].method;
-	if (typeof method != 'undefined' && method == 'post') {
-	    return true;
-	}
-	return false;
+        var method = config[ref.service].commands[ref.command].method;
+        if (typeof method != 'undefined' && method.toLowerCase() !== 'get') {
+            return true;
+        }
+        return false;
     };
      
     /**
@@ -123,7 +124,7 @@
         ref.activateResultTab(ref.html);
 
         if (ref.isPost()) {
-            document.getElementById('form').method = 'post';
+            document.getElementById('form').method = config[ref.service].commands[ref.command].method;
             document.getElementById('form').target = 'iframe';
             document.getElementById('submit').style.display = 'block';
             document.getElementById('iframe').src = 'about:blank';
