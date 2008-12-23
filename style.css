@@ -106,14 +106,26 @@ div#navigation div.linklist ul li {
     font-size: 11px;
 }
 
-input#url {
+.entrybar, .entrybar input {
     background-color: #efe;
+    border: 0;
+}
+.entrybar {
     margin-top: 1em;
     border: solid 1px #aa0;
+    width: 99%;
+    height: 2em;
+}
+.entrybar input {
     font-size: 130%;
     padding-left: 0.1em;
     padding-top: 0.1em;
-    width: 99%;
+    margin: 1px;
+}
+.entrybar input#method {
+    width: 10em;
+    text-align: right;
+    padding-right: 5px;
 }
 
 .error, input#url.error {

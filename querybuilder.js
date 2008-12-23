@@ -89,6 +89,8 @@
             }
         }
 
+        var method = config[ref.service].commands[ref.command].method || 'get';
+        Dom.get('method').value = method.toUpperCase();
         if (urlIframe != ref.lastUrlIframe) {
             document.getElementById('url').value=url;
 	    if (ref.isPost()) {
@@ -350,7 +352,10 @@
     <div id="home_screen"></div>\n\
     <div id="container">\n\
       <div id="tabs"></div>\n\
-      <input id="url" />\n\
+      <div id="entrybar" class="entrybar">\n\
+          <input id="method" />\n\
+          <input id="url" />\n\
+      </div>\n\
       <div id="url_message"></div>\n\
       <table>\n\
         <tr>\n\
@@ -424,6 +429,11 @@
 
     ref.resizeIframe = function() {
         document.getElementById('iframe').style.height = (document.documentElement.clientHeight - YAHOO.util.Dom.getXY('iframe')[1] - 10) + 'px';
+        // Also resize URL to correct width
+        var entrybar = Dom.get('entrybar');
+        var method = Dom.get('method');
+        var url = Dom.get('url');
+        url.style.width = (entrybar.clientWidth - method.clientWidth - 25) + 'px';
     };
 
     /**
