@@ -89,8 +89,8 @@
             }
         }
 
-        var method = config[ref.service].commands[ref.command].method || 'get';
-        Dom.get('method').value = method.toUpperCase();
+        var method = config[ref.service].commands[ref.command].method || 'get';
+        Dom.get('method').innerHTML = method.toUpperCase();
         if (urlIframe != ref.lastUrlIframe) {
             document.getElementById('url').value=url;
 	    if (ref.isPost()) {
@@ -165,12 +165,12 @@
     };
 
     ref.urlFieldInvalid = function(message) {
-        document.getElementById('url').className = 'error';
-        document.getElementById('url_message').innerHTML = message;
+        Dom.addClass('url', 'error');
+        Dom.get('url_message').innerHTML = message;
     };
     ref.urlFieldValid = function() {
-        document.getElementById('url').className = '';
-        document.getElementById('url_message').innerHTML = '';
+        Dom.removeClass('url', 'error');
+        Dom.get('url_message').innerHTML = '';
     };
      
     ref.onUrlFieldChange = function() {
@@ -353,8 +353,8 @@
     <div id="container">\n\
       <div id="tabs"></div>\n\
       <div id="entrybar" class="entrybar">\n\
-          <input id="method" />\n\
-          <input id="url" />\n\
+          <div id="method" class="method input"></div>\n\
+          <input id="url" class="input" />\n\
       </div>\n\
       <div id="url_message"></div>\n\
       <table>\n\
