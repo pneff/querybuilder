@@ -357,6 +357,7 @@
           <input id="url" class="input" />\n\
       </div>\n\
       <div id="url_message"></div>\n\
+      <p id="service_description"></p>\n\
       <table>\n\
         <tr>\n\
           <td id="result">\n\
@@ -713,6 +714,8 @@
             html.push('<a href="'+config[ref.service].commands[ref.command].doc_response+'">Documentation query-result</a>');
         }
         document.getElementById('documentation').innerHTML=html.join('<br />');
+        var desc = config[ref.service].commands[ref.command].description;
+        Dom.get('service_description').innerHTML = desc ? desc : '';
     };
 
     ref.addDefaultFields = function() {
