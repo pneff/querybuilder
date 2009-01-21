@@ -660,7 +660,6 @@
     };
     
     ref.createOptionsResponseTab = function() {
-        console.debug("createOptionsResponseTab");
         var cont = document.createElement('div');
         Dom.get('optionstd').insertBefore(cont, Dom.get('options'));
         Dom.addClass(cont, 'optionsresponse');
