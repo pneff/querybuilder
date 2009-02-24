@@ -1,0 +1,23 @@
+<!--
+  - Each div below this is used by the querybuilder ui as template.
+  - John Resig's micro-templating is used to evaluate these templates,
+  - see http://ejohn.org/blog/javascript-micro-templating/.
+  -->
+
+<!-- ui.js: Home screen. -->
+<script id="homescreen_tmpl" type="text/html">
+    <ul class="services">
+        <% for (service_key in config) { %>
+            <% var service = config[service_key]; %>
+            <h2><%= service.name %></h2>
+            <ul class="methods">
+                <% for (command_key in service.commands) { %>
+                    <% var command = service.commands[command_key]; %>
+                    <a href="#<%=service_key%>.<%=command_key%>">
+                        <%= command.name %>
+                    </a>
+                <% } %>
+            </ul>
+        <% } %>
+    </ul>
+</script>

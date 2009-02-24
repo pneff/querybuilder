@@ -946,8 +946,8 @@
      };
 
 })();
-
-YAHOO.util.Event.onDOMReady(YAHOO.lcl.querybuilder.init);
-window.onresize = YAHOO.lcl.querybuilder.resizeIframe;
+// 
+// YAHOO.util.Event.onDOMReady(YAHOO.lcl.querybuilder.init);
+// window.onresize = YAHOO.lcl.querybuilder.resizeIframe;
 
 var config = {};

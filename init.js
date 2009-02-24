@@ -9,4 +9,6 @@ document.write('\n\
     <script type="text/javascript" src="querybuilder/yui/treeview/treeview.js"></script>\n\
     <link type="text/css" href="querybuilder/style.css" rel="stylesheet" />\n\
     <script type="text/javascript" src="querybuilder/helper.js"></script>\n\
-    <script type="text/javascript" src="querybuilder/querybuilder.js"></script>');
+    <script type="text/javascript" src="querybuilder/querybuilder.js"></script>\
+    <script type="text/javascript" src="querybuilder/template.js"></script>\
+    <script type="text/javascript" src="querybuilder/ui.js"></script>');
