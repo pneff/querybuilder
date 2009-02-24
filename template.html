@@ -8,16 +8,20 @@
 <script id="homescreen_tmpl" type="text/html">
     <ul class="services">
         <% for (service_key in config) { %>
-            <% var service = config[service_key]; %>
-            <h2><%= service.name %></h2>
-            <ul class="methods">
-                <% for (command_key in service.commands) { %>
-                    <% var command = service.commands[command_key]; %>
-                    <a href="#<%=service_key%>.<%=command_key%>">
-                        <%= command.name %>
-                    </a>
-                <% } %>
-            </ul>
+            <li class="service">
+                <% var service = config[service_key]; %>
+                <h2><%= service.name %></h2>
+                <ul class="methods">
+                    <% for (command_key in service.commands) { %>
+                        <% var command = service.commands[command_key]; %>
+                        <li class="method">
+                            <a href="#<%=service_key%>.<%=command_key%>">
+                                <%= command.name %>
+                            </a>
+                        </li>
+                    <% } %>
+                </ul>
+            </li>
         <% } %>
     </ul>
 </script>

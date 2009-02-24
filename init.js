@@ -1,4 +1,5 @@
 document.write('\n\
+    <link rel="stylesheet" type="text/css" href="querybuilder/yui/reset/reset-min.css" />\n\
     <link rel="stylesheet" type="text/css" href="querybuilder/yui/fonts/fonts-min.css" />\n\
     <link rel="stylesheet" type="text/css" href="querybuilder/yui/tabview/assets/skins/sam/tabview.css" />\n\
     <link rel="stylesheet" type="text/css" href="querybuilder/yui/treeview/assets/skins/sam/treeview.css" />\n\
