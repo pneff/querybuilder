@@ -48,7 +48,9 @@
             }
             var encodedValue = encodeURIComponent(value);
             params[input.name] = value;
-            encodedParams[input.name] = encodedValue;
+            if (input.value != '') {
+                encodedParams[input.name] = encodedValue;
+            }
             // just include fields in the get-parameters, that are not part of the url, e.g. exclude 'slot' when url='{slot}/comments'
             if (input.value != '' && baseUrl.indexOf('{' + input.name + '}') == -1) {
                 getParams[input.name] = encodedValue;
