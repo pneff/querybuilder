@@ -1,13 +1,7 @@
 document.write('\n\
-    <link rel="stylesheet" type="text/css" href="querybuilder/yui/reset/reset-min.css" />\n\
-    <link rel="stylesheet" type="text/css" href="querybuilder/yui/fonts/fonts-min.css" />\n\
-    <link rel="stylesheet" type="text/css" href="querybuilder/yui/tabview/assets/skins/sam/tabview.css" />\n\
-    <link rel="stylesheet" type="text/css" href="querybuilder/yui/treeview/assets/skins/sam/treeview.css" />\n\
-    <script type="text/javascript" src="querybuilder/yui/yahoo-dom-event/yahoo-dom-event.js"></script>\n\
-    <script type="text/javascript" src="querybuilder/yui/element/element-beta-min.js"></script>\n\
-    <script type="text/javascript" src="querybuilder/yui/tabview/tabview-min.js"></script>\n\
-    <script type="text/javascript" src="querybuilder/yui/animation/animation-min.js"></script>\n\
-    <script type="text/javascript" src="querybuilder/yui/treeview/treeview.js"></script>\n\
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css" />\n\
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/fonts/fonts-min.css" />\n\
+    <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.7.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>\n\
     <link type="text/css" href="querybuilder/style.css" rel="stylesheet" />\n\
     <script type="text/javascript" src="querybuilder/helper.js"></script>\n\
     <script type="text/javascript" src="querybuilder/querybuilder.js"></script>\
